@@ -1,0 +1,299 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1E1E1E;
+    --secondary-color: #FFF;
+    --background-color: #080808;
+    --hover-color: #ff9900;
+}
+
+body {
+    padding: 10px;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 700;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    overflow-x: hidden;
+    text-transform: uppercase;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+
+
+.input-container {
+    position: relative;
+}
+
+.input-container i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px 15px 10px 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.bx-menu {
+    font-size: 40px;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+#menu-icon:hover {
+    color: var(--hover-color);
+}
+
+/* Side Navigation Menu (Right Side) */
+#side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0; 
+    background-color: var(--primary-color);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+#side-menu i{
+    padding: 8px 16px;
+    font-size: 20px;
+}
+
+#menu-icon:hover{
+    color: var(--hover-color);
+}
+
+#side-menu a {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--secondary-color);
+    display: block;
+    transition: 0.3s;
+}
+
+#side-menu span{
+    color: var(--hover-color);
+    text-transform: uppercase;
+}
+
+#side-menu a:hover {
+    color: var(--hover-color);
+}
+
+#side-menu .close-btn {
+    position: absolute;
+    top: 15px;
+    left: 25px; /* Move the close button to the left */
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Main Section */
+.mainimage {
+    position: relative;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainimage h1{
+    position: absolute;
+    color:var(--secondary-color);
+    padding: 7px;
+    font-size: 26px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 50px;   
+    left: 10px;     
+    display: flex;
+    gap: 10px;      
+    z-index: 10;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.mainimage img {
+    width: 600px;
+    padding: 10px;
+}
+
+.names {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.names h5 {
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.names h5:hover {
+    color: var(--hover-color);
+}
+
+.names a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+/* Select Info Section */
+/* Select Info Section */
+.selectinfo {
+    background-color: var(--primary-color);
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.selectinfo form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 20px);
+    min-width: 220px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--secondary-color);
+}
+
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+input[type="date"]:hover,
+select:hover {
+    background-color: var(--hover-color);
+    color: var(--secondary-color);
+    box-shadow: 0px 4px 8px rgba(255, 153, 0, 0.5);
+}
+
+input[type="date"]:focus,
+select:focus {
+    outline: none;
+    background-color: var(--hover-color);
+    color: var(--secondary-color);
+    box-shadow: 0px 0px 6px rgba(255, 153, 0, 0.8);
+}
+
+.button {
+    text-align: center;
+    width: 100%;
+}
+
+.button button {
+    padding: 10px 20px;
+    margin-bottom: -120px;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--background-color);
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.next button{
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--background-color);
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.next button:hover{
+      background-color: var(--hover-color);
+}
+
+.button button:hover {
+    background-color: var(--hover-color);
+    
+    
+    
+}
+
+.button button:active {
+    transform: translateY(0);
+    box-shadow: 0px 2px 6px rgba(255, 153, 0, 0.3);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .selectinfo form {
+        flex-direction: column;
+    }
+    .form-group {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+    .button {
+        margin-top: 20px;
+    }
+}

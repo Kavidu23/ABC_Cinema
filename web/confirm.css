@@ -1,0 +1,133 @@
+:root {
+    --primary-color: #1E1E1E;
+    --secondary-color: #FFF;
+    --background-color: #080808;
+    --hover-color: #ff9900;
+}
+
+/* General Styles */
+body {
+    font-family: 'Instrument Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.movie-image {
+    flex: 1;
+    text-align: center;
+   
+    
+}
+
+.movie-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    
+}
+
+.booking-details {
+    flex: 2;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.value {
+    color: var(--hover-color);
+}
+
+/* Ticket Selection */
+.ticket-selection {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.ticket-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ticket-detail label {
+    margin-right: 10px;
+}
+
+.ticket-detail select{
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Actions */
+.actions-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+button:hover{
+    background-color: var(--hover-color);
+}
+
+.cancelform input{
+    display: none;
+}
+.cancelform form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

@@ -1,0 +1,140 @@
+:root {
+    --primary-color: #1E1E1E;
+    --secondary-color: #FFF;
+    --background-color: #080808;
+    --hover-color: #ff9900;
+}
+
+/* General Styles */
+body {
+    font-family: 'Instrument Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Headings */
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Screen */
+.screen {
+    background: var(--secondary-color);
+    color: var(--background-color);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Seating Layout */
+.seating {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: var(--hover-color);
+}
+
+.seat {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.seat:hover {
+    transform: scale(1.2);
+}
+
+.seat.available {
+    background-color: #ddd;
+}
+
+.seat.selected {
+    background-color: var(--hover-color);
+}
+
+.seat.unavailable {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* Legend */
+.legend {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.legend span {
+    display: flex;
+    align-items: center;
+}
+
+.legend .seat{
+    margin: 0 5px;
+}
+
+/* Actions */
+.actions button {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.actions button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.actions button:hover:not(:disabled) {
+    background-color: var(--hover-color);
+}
+
+
+.other{
+    display: none;
+}
+

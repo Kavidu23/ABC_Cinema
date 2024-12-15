@@ -1,0 +1,382 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1E1E1E;
+    --secondary-color: #FFF;
+    --background-color: #080808;
+    --hover-color: #ff9900;
+}
+
+body {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+    color:var(--primary-color);;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container i {
+    position: absolute;
+    margin: 0;
+    padding: 0; /* Remove padding */
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px 15px 10px 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.bx-menu {
+    font-size: 40px;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+/* Side Navigation Menu (Right Side) */
+#side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0; 
+    background-color: var(--primary-color);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+#side-menu i{
+    padding: 8px 16px;
+    font-size: 20px;
+}
+
+#menu-icon:hover{
+    color: var(--hover-color);
+}
+
+#side-menu a {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--secondary-color);
+    display: block;
+    transition: 0.3s;
+}
+
+#side-menu span{
+    color: var(--hover-color);
+    text-transform: uppercase;
+}
+
+#side-menu a:hover {
+    color: var(--hover-color);
+}
+
+#side-menu .close-btn {
+    position: absolute;
+    top: 15px;
+    left: 25px; /* Move the close button to the left */
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Open Side Menu */
+#menu-icon.active + #side-menu {
+    width: 250px; /* Width of the sidebar */
+}
+
+/* Carousel */
+.carousel-inner img {
+    height: auto;
+    max-height: 630px;
+    object-fit: fill;
+    
+}
+
+/* Now Showing & Coming Soon */
+.nowshowing, .upcoming {
+    
+    margin-top: 90px;
+}
+
+.nowshowing p, .upcoming p {
+    font-size: 24px;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+    
+}
+
+/* Individual Image Hover Effect */
+.image-grid div {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.image-grid div img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-grid div .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-grid div:hover img {
+    transform: scale(1.05);
+}
+
+.image-grid div:hover .overlay {
+    opacity: 1;
+}
+
+.image-grid div .overlay button {
+    padding: 10px 20px;
+    margin-bottom: -120px;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--background-color);
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.image-grid div .overlay button:hover {
+    background-color: #ff9900;
+}
+
+/* Footer */
+.footer {
+    margin-top: 140px;
+    padding: 40px 20px;
+    background-color: var(--primary-color);
+    background-image: url(Resources/footer.jpg);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer .links {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer .links p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer .links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .links ul li {
+    margin: 5px 0;
+}
+
+.footer .links ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer .links ul li a:hover {
+    color: var(--hover-color);
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer .social-icons a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: var(--hover-color);
+}
+
+.footer .social-icons i {
+    font-size: 24px;
+}
+
+/* New Menu Button Styles (Login/Signup) */
+.menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: var(--hover-color);
+}
+
+
+.carousel-item {
+    position: relative;
+}
+
+.overlayer {
+    position: absolute;
+    bottom: 15px;   
+    left: 10px;     
+    display: flex;
+    gap: 10px;      
+    z-index: 10;    
+}
+
+.overlayer #bannerb {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+#bannerb:hover {
+    background-color: var(--secondary-color); /* Darker on hover */
+}
+
+
+
+.image-wrapper{
+    position: relative;
+}
+
+.image-wrapper p{
+    color:var(--secondary-color);
+    padding: 7px;
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 50px;   
+    left: 10px;     
+    display: flex;
+    gap: 10px;      
+    z-index: 10;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.upcoming .overlay button{
+    margin-top: 120px;
+}
+
+.search-results {
+    background-color: white;
+    color:var(--primary-color);
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    width: calc(100% - 20px);
+    z-index: 1000;
+    }
+    
+.search-item {
+    padding: 8px;
+    cursor: pointer;
+    }
+
+    .search-item:hover {
+    background: #f0f0f0;
+    }
+
+
+    

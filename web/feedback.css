@@ -1,0 +1,157 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1E1E1E;
+    --secondary-color: #FFF;
+    --background-color: #080808;
+    --hover-color: #ff9900;
+    --input-border-color: #555;
+    --input-focus-border-color: #ff9900;
+}
+
+body {
+    font-family: 'Instrument Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    line-height: 1.6;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: var(--primary-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Styling */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a{
+    text-decoration: none;
+    color:var(--hover-color);
+    text-decoration: underline;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px; /* Space between elements */
+    width: 100%;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--hover-color);
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Input, Textarea, Select Styling */
+input, textarea, select {
+    padding: 14px 18px;
+    font-size: 16px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    outline: none;
+    width: 100%;  /* Make sure inputs take up full width */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input focus effects */
+input:focus, textarea:focus, select:focus {
+    border-color: var(--input-focus-border-color);
+    background-color: #222; /* Slightly darker background on focus */
+}
+
+/* Textarea specific styles */
+textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 150px; /* Set minimum height for the textarea */
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+
+    input, textarea, select {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+
